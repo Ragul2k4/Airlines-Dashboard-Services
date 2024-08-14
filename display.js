@@ -10,7 +10,7 @@ function loadFlightData() {
             <td>${flight.departure_airport}</td>
             <td>${flight.arrival_airport}</td>
             <td>${formatDate(flight.departure_time)}</td>
-            <td>${formatDate(flight.arrival_time)}</td>
+            <td>${formatDate(flight.arrival_time)}</td> 
             <td>${flight.status}</td>
             <td>${flight.gate}</td>
             <td>${flight.terminal}</td>
