@@ -1,13 +1,29 @@
+*{
+    margin: 0px;
+}
 body { 
     font-family: Arial, sans-serif; 
-    margin: 20px; 
-    background: linear-gradient(  #8d8df5, #4bf6c8);
+    /* margin: 20px;  */
+    background: linear-gradient(  #9d9df5,#d2d2e3, #4bf6c8);
 
     color: #1b1a1a;
 }
-h1, h2 {
+.flg{
+    background: linear-gradient(135deg, #1f3c88, #38a1db);
+    color: white;
+    padding: 4%;
     text-align: center;
-    color: #100f0f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    font-size: larger;
+}
+h1 {
+    text-align: center;
+    color: #fefdfd;
+}
+ h2 {
+    text-align: center;
+    color: #2f2e2e;
 }
 table { 
     width: 100%; 
@@ -75,4 +91,27 @@ button:hover {
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+footer {
+    background-color: #1f3c88;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.footer-content p {
+    margin: 0;
+    font-size: 1em;
+}
+.imgfly{
+    position: absolute;
+    top: 8%;
+    left: 29%;
 }
