@@ -1,3 +1,4 @@
+
 let flightData = JSON.parse(localStorage.getItem('flightData')) || [];
 
 function insertFlight() {
@@ -11,11 +12,14 @@ function insertFlight() {
         status: document.getElementById('status').value,
         gate: document.getElementById('gate').value,
         terminal: document.getElementById('terminal').value
+
     };
     flightData.push(flight);
     localStorage.setItem('flightData', JSON.stringify(flightData));
     clearForms();
+   
 }
+
 
 function updateFlight() {
     const flightNumber = document.getElementById('update_flight_number').value;
@@ -53,3 +57,6 @@ function clearForms() {
     document.getElementById('updateForm').reset();
     document.getElementById('deleteForm').reset();
 }
+    
+
+//-----------------------------------------------------------------------------------------------
