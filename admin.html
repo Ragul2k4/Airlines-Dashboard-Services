@@ -7,10 +7,15 @@
 </head>
 <link rel="stylesheet" href="admin.css">
 <body>
-    <h1>Flight Data Management System</h1>
+    <div class="flg">
+        <h1>
+            Flight Data Management
+        </h1>
+    </div>
 
     <!-- Insert Flight Form -->
-    <h2>Insert New Flight</h2>
+     <div class="imgfly"><img src="images\airplane-take-off.png"  width="50" height="50"></div>
+    <h2 style="font-style: initial;"> Insert Flights</h2>
     <div class="full_form">
     <form id="insertForm">
         <label for="flight_number">Flight No:</label>
@@ -71,5 +76,31 @@
         <a href="display.html">  <button type="button">DISPLAY</button></a>
     </div>
 </body>
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Flight Data Management. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    function insertFlight() {
+        const formData = new FormData(document.getElementById('insertForm'));
+
+        fetch('/insertFlight', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json',
+            },
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert(data);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+</script>
 <script src="admin.js"></script>
 </html>
