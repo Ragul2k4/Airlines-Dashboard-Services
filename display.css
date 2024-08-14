@@ -29,7 +29,7 @@ th {
 @keyframes blink {
     0% {
         opacity: 1;
-        background-color: #fd9c60;
+        background-color: #e87228;
     }
     25% {
         opacity: 1;
@@ -82,5 +82,23 @@ button:hover {
     color: #c9caca;
 }
 #flightTable{
-  margin-top: 4%;
+  margin-top: -1%;
+}
+footer {
+    background-color: #1f3c88;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.footer-content p {
+    margin: 0;
+    font-size: 1em;
 }
