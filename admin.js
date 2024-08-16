@@ -41,16 +41,29 @@ function updateFlight() {
 }
 
 function deleteFlight() {
-    const flightNumber = document.getElementById('delete_flight_number').value;
-    const index = flightData.findIndex(f => f.flight_number === flightNumber);
+    const flightNumber = document.getElementById('delete_flight_number').value.trim();
+    console.log('Flight number to delete:', flightNumber);
+
+    // Iterate over flightData to check each flight number
+    flightData.forEach((flight, idx) => {
+        console.log(`Checking flight at index ${idx}:`, flight.flight_number);
+    });
+
+    const index = flightData.findIndex(f => f.flight_number.trim() === flightNumber);
+    
     if (index !== -1) {
+        console.log('Match found at index:', index);
         flightData.splice(index, 1);
         localStorage.setItem('flightData', JSON.stringify(flightData));
         clearForms();
+        alert(`Flight ${flightNumber} deleted successfully.`);
     } else {
         alert('Flight not found');
     }
 }
+
+
+
 
 function clearForms() {
     document.getElementById('insertForm').reset();
