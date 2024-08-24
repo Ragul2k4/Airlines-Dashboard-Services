@@ -52,11 +52,11 @@
 
     <div class="display">
         <a href="admin.html">
-            <button type="button">ADMIN</button>
+            <button type="button" onclick="authenticate()">ADMIN</button>
         </a>
     </div>
 
-    <footer>
+    <footer >
         <div class="footer-content">
             <p>&copy; 2024 Flight Data Management. All rights reserved.</p>
             <p>Need help? <a href="contact.html">Contact Us</a> | <a href="privacy.html">Privacy Policy</a></p>
@@ -72,6 +72,25 @@
         }
         setInterval(updateTime, 1000);
         updateTime();
+    </script>
+    <script>
+       function authenticate() {
+        var username = prompt("Enter username:");
+        if (username !== null) {
+            var password = prompt("Enter password:");
+
+        
+            if (username === "ragul" && password === "1214") {
+                
+                window.location.href = "admin.html";
+            } else {
+              
+                alert("Incorrect username or password. Please try again.");
+            }
+        } else {
+            alert("No username provided.");
+        }
+    }
     </script>
 </body>
 
