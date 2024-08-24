@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +12,7 @@
     <link rel="stylesheet" href="display.css">
 
     <style>
-        
+        /* Add any additional styles here */
     </style>
 </head>
 
@@ -51,12 +50,10 @@
     </table>
 
     <div class="display">
-        <a href="admin.html">
-            <button type="button" onclick="authenticate()">ADMIN</button>
-        </a>
+        <button type="button" onclick="authenticate()">ADMIN</button>
     </div>
 
-    <footer >
+    <footer>
         <div class="footer-content">
             <p>&copy; 2024 Flight Data Management. All rights reserved.</p>
             <p>Need help? <a href="contact.html">Contact Us</a> | <a href="privacy.html">Privacy Policy</a></p>
@@ -75,23 +72,27 @@
     </script>
     <script>
        function authenticate() {
-        var username = prompt("Enter username:");
-        if (username !== null) {
-            var password = prompt("Enter password:");
-
-        
-            if (username === "ragul" && password === "1214") {
-                
-                window.location.href = "admin.html";
-            } else {
-              
-                alert("Incorrect username or password. Please try again.");
+            var username = prompt("Enter username:");
+            
+            if (username === null || username.trim() === "") {
+                alert("No username provided.");
+                return; 
             }
-        } else {
-            alert("No username provided.");
+            
+            var password = prompt("Enter password:");
+            
+            if (password === null || password.trim() === "") {
+                alert("No password provided.");
+                return; 
+            }
+
+            
+            if (username === "ragul" && password === "1214") {
+                window.location.href = "admin.html"; // Redirect if correct
+            } else {
+                alert("Incorrect username or password. Please try again."); 
+            }
         }
-    }
     </script>
 </body>
-
 </html>
